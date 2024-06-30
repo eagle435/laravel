@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controllers and Views in Laravel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Controllers and Views in Laravel</h1>
+    </header>
+    <main>
+        <section id="controllers">
+            <h2>Controllers</h2>
+            <p>Create a controller using Artisan:</p>
+            <pre><code class="language-bash">php artisan make:controller UserController</code></pre>
+            <p>Define controller methods:</p>
+            <pre><code class="language-php">// UserController.php
+public function index() {
+    $users = User::all();
+    return view('users.index', ['users' => $users]);
+}</code></pre>
+        </section>
+        <section id="views">
+            <h2>Views</h2>
+            <p>Create a view in <code>resources/views/users/index.blade.php</code>:</p>
+            <pre><code class="language-php">&lt;!-- index.blade.php -->
+&lt;html>
+&lt;head>
+    &lt;title>Users List&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;h1>Users List&lt;/h1>
+    &lt;ul>
+        @foreach ($users as $user)
+            &lt;li>{{ $user->name }}&lt;/li>
+        @endforeach
+    &lt;/ul>
+&lt;/body>
+&lt;/html></code></pre>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

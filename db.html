@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eloquent ORM in Laravel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Eloquent ORM in Laravel</h1>
+    </header>
+    <main>
+        <section id="models">
+            <h2>Models</h2>
+            <p>Create a model using Artisan:</p>
+            <pre><code class="language-bash">php artisan make:model User</code></pre>
+            <p>Define relationships and attributes:</p>
+            <pre><code class="language-php">// User.php
+class User extends Model {
+    protected $fillable = ['name', 'email', 'password'];
+
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
+}</code></pre>
+        </section>
+        <section id="queries">
+            <h2>Queries</h2>
+            <p>Perform queries using Eloquent:</p>
+            <pre><code class="language-php">// Retrieve all users
+$users = User::all();
+
+// Retrieve user by ID
+$user = User::find($id);
+
+// Create a new user
+$user = User::create(['name' => 'John Doe', 'email' => 'john@example.com', 'password' => bcrypt('password')]);
+
+// Update user
+$user->update(['name' => 'Jane Doe']);
+
+// Delete user
+$user->delete();</code></pre>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

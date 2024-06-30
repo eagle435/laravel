@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication and Authorization in Laravel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Authentication and Authorization in Laravel</h1>
+    </header>
+    <main>
+        <section id="authentication">
+            <h2>Authentication</h2>
+            <p>Scaffold authentication views:</p>
+            <pre><code class="language-bash">php artisan make:auth</code></pre>
+            <p>Configure authentication middleware:</p>
+            <pre><code class="language-php">// Apply middleware to routes
+Route::get('/dashboard', function () {
+    //
+})->middleware('auth');</code></pre>
+        </section>
+        <section id="authorization">
+            <h2>Authorization</h2>
+            <p>Define policies for authorization:</p>
+            <pre><code class="language-php">// Define policy
+Gate::define('update-post', function ($user, $post) {
+    return $user->id === $post->user_id;
+});
+
+// Authorize actions
+if (Gate::allows('update-post', $post)) {
+    // Update post
+}</code></pre>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

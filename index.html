@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Linux Commands & Tutorials</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #495057;
+            border-radius: 4px;
+        }
+
+        section {
+            padding: 2rem 1rem;
+            margin: 2rem auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .command,
+        .tutorial {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ced4da;
+        }
+
+        .command-title,
+        .tutorial-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #343a40;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            color: #dc3545;
+            font-size: 0.9rem;
+        }
+
+        p,
+        ul,
+        ol {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        ul,
+        ol {
+            padding-left: 2rem;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #343a40;
+        }
+
+        .section-content {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#commands">Laravel Commands</a></li>
+            <li><a href="#tutorials">Laravel Tutorials</a></li>
+            <li><a href="#free-course">Free Course</a></li>
+
+        </ul>
+    </nav>
+
+    <section id="commands">
+        <div class="section-content">
+            <h1 class="section-title">Laravel Linux Commands</h1>
+            <div class="command">
+                <div class="command-title">1. Installing Laravel</div>
+                <code>composer global require laravel/installer</code>
+                <p>Installs the Laravel installer globally on your system.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">2. Creating a New Laravel Project</div>
+                <code>laravel new project_name</code>
+                <p>Creates a new Laravel project named project_name.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">3. Serve the Application</div>
+                <code>php artisan serve</code>
+                <p>Starts a local development server at <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">4. Running Migrations</div>
+                <code>php artisan migrate</code>
+                <p>Executes the migrations defined in your project.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">5. Creating a Controller</div>
+                <code>php artisan make:controller ControllerName</code>
+                <p>Generates a new controller named ControllerName.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">6. Database Seeding</div>
+                <code>php artisan db:seed</code>
+                <p>Seeds the database with records specified in your seed classes.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">7. Creating a Migration</div>
+                <code>php artisan make:migration create_table_name</code>
+                <p>Creates a new migration file for creating a database table.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">8. Rolling Back Migrations</div>
+                <code>php artisan migrate:rollback</code>
+                <p>Rolls back the last database migration.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">9. Clearing Cache</div>
+                <code>php artisan cache:clear</code>
+                <p>Clears the application cache.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">10. Optimizing Class Loading</div>
+                <code>composer dump-autoload -o</code>
+                <p>Optimizes the autoloader for better performance.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">11. Creating Routes</div>
+                <code>Route::get('/example', 'ExampleController@index');</code>
+                <p>Defines a route that maps a URL to a controller action.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">12. Artisan Commands List</div>
+                <code>php artisan list</code>
+                <p>Displays all available Artisan commands.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">13. Generating Model Factories</div>
+                <code>php artisan make:factory ModelFactoryName</code>
+                <p>Creates a new model factory.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">14. Managing Environment Variables</div>
+                <code>cp .env.example .env</code>
+                <p>Copies the example environment file to create a new environment file.</p>
+            </div>
+            <div class="command">
+                <div class="command-title">15. Running Tests</div>
+                <code>php artisan test</code>
+                <p>Executes PHPUnit tests for your Laravel application.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutorials">
+        <div class="section-content">
+            <h1 class="section-title">Laravel Tricks and Tutorials</h1>
+            <div class="tutorial">
+                <div class="tutorial-title">1. Setting Up Laravel</div>
+                <p>Follow these steps to set up Laravel:</p>
+                <ol>
+                    <li>Install Composer from <a href="https://getcomposer.org/download/" target="_blank">here</a>.</li>
+                    <li>Run <code>composer global require laravel/installer</code>.</li>
+                    <li>Create a new project with <code>laravel new project_name</code>.</li>
+                    <li>Navigate to the project directory and start the server with <code>php artisan serve</code>.</li>
+                </ol>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">2. Using Eloquent ORM</div>
+                <p>Eloquent ORM provides an easy way to interact with your database. Here's how you can use it:</p>
+                <ul>
+                    <li>Create a model with <code>php artisan make:model ModelName</code>.</li>
+                    <li>Define your database schema in migration files.</li>
+                    <li>Use the model to interact with the database in your controllers.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">3. Creating Middleware</div>
+                <p>Middleware allows you to filter HTTP requests. Here's how to create one:</p>
+                <ul>
+                    <li>Run <code>php artisan make:middleware MiddlewareName</code> to create a new middleware.</li>
+                    <li>Add logic to the <code>handle</code> method of the middleware.</li>
+                    <li>Register the middleware in <code>app/Http/Kernel.php</code>.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">4. Authentication in Laravel</div>
+                <p>Laravel provides built-in authentication features. Here’s how to set it up:</p>
+                <ol>
+                    <li>Run <code>php artisan make:auth</code> to scaffold basic login and registration views.</li>
+                    <li>Configure your database credentials in <code>.env</code> file.</li>
+                    <li>Run migrations using <code>php artisan migrate</code>.</li>
+                    <li>Access authentication routes such as <code>/login</code> and <code>/register</code>.</li>
+                </ol>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">5. Task Scheduling</div>
+                <p>Automate recurring tasks with Laravel's task scheduler:</p>
+                <ul>
+                    <li>Define scheduled tasks in <code>App\Console\Kernel.php</code>.</li>
+                    <li>Use the <code>schedule:run</code> command to execute scheduled tasks.</li>
+                    <li>Monitor scheduled tasks with <code>php artisan schedule:work</code>.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">6. Sending Email with Laravel</div>
+                <p>Configure and send emails from your Laravel application:</p>
+                <ul>
+                    <li>Set up mail configurations in <code>config/mail.php</code>.</li>
+                    <li>Use <code>Mail</code> facade to send emails.</li>
+                    <li>Create mailable classes for custom email templates.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">7. Handling File Uploads</div>
+                <p>Upload files securely and manage them in Laravel:</p>
+                <ul>
+                    <li>Use Laravel's file storage APIs to handle file uploads.</li>
+                    <li>Validate file uploads with Laravel's validation rules.</li>
+                    <li>Store uploaded files in local storage or cloud services like Amazon S3.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">8. Using Queues in Laravel</div>
+                <p>Implement asynchronous processing with Laravel queues:</p>
+                <ul>
+                    <li>Configure queue drivers in <code>.env</code> file.</li>
+                    <li>Dispatch jobs to queues using <code>dispatch()</code> method.</li>
+                    <li>Run queue workers with <code>php artisan queue:work</code>.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">9. Testing in Laravel</div>
+                <p>Write and run tests for your Laravel application:</p>
+                <ul>
+                    <li>Use PHPUnit for unit and feature testing.</li>
+                    <li>Create test cases for controllers, models, and routes.</li>
+                    <li>Run tests with <code>php artisan test</code>.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">10. Deploying Laravel Applications</div>
+                <p>Deploy your Laravel application to production:</p>
+                <ul>
+                    <li>Configure web server (Apache/Nginx) for Laravel.</li>
+                    <li>Set up environment variables on your production server.</li>
+                    <li>Optimize configuration and caching for performance.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">11. Generating Seeders</div>
+                <p>Create seeders to populate your database with sample data:</p>
+                <ul>
+                    <li>Generate a seeder class with <code>php artisan make:seeder SeederName</code>.</li>
+                    <li>Edit the generated seeder to define data insertion logic.</li>
+                    <li>Run the seeder using <code>php artisan db:seed --class=SeederName</code>.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">12. Using Laravel Mix for Asset Compilation</div>
+                <p>Compile assets like CSS and JavaScript with Laravel Mix:</p>
+                <ul>
+                    <li>Define asset compilation tasks in <code>webpack.mix.js</code>.</li>
+                    <li>Run <code>npm install</code> to install dependencies.</li>
+                    <li>Compile assets using <code>npx mix</code> or <code>npm run dev</code>.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">13. Managing Sessions</div>
+                <p>Store session data securely in Laravel:</p>
+                <ul>
+                    <li>Access session data using the <code>Session</code> facade.</li>
+                    <li>Configure session settings in <code>config/session.php</code>.</li>
+                    <li>Use session variables across different parts of your application.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">14. Implementing API Authentication</div>
+                <p>Secure APIs with Laravel's authentication:</p>
+                <ul>
+                    <li>Generate API tokens for users using Laravel Passport.</li>
+                    <li>Authenticate API requests with tokens or OAuth2.</li>
+                    <li>Restrict access to API routes based on authentication.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">15. Customizing Error Pages</div>
+                <p>Create custom error pages for Laravel applications:</p>
+                <ul>
+                    <li>Generate error views for HTTP status codes like 404 and 500.</li>
+                    <li>Modify error handling logic in <code>app/Exceptions/Handler.php</code>.</li>
+                    <li>Customize error messages and responses based on application requirements.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">16. Integrating Third-Party Packages</div>
+                <p>Extend Laravel functionality with third-party packages:</p>
+                <ul>
+                    <li>Install packages using Composer (<code>composer require package/name</code>).</li>
+                    <li>Integrate package features into your Laravel application.</li>
+                    <li>Configure package settings and dependencies.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">17. Managing Environment-Specific Configuration</div>
+                <p>Handle environment-specific settings in Laravel:</p>
+                <ul>
+                    <li>Define environment variables in <code>.env</code> files.</li>
+                    <li>Access environment variables using <code>env()</code> helper.</li>
+                    <li>Set different configurations for development, testing, and production environments.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">18. Integrating Redis for Cache and Sessions</div>
+                <p>Utilize Redis for caching and session management in Laravel:</p>
+                <ul>
+                    <li>Configure Redis connections in <code>config/database.php</code>.</li>
+                    <li>Use Redis for caching database queries and other application data.</li>
+                    <li>Store session data securely with Redis as session driver.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">19. Implementing Localization</div>
+                <p>Support multiple languages in Laravel applications:</p>
+                <ul>
+                    <li>Create language files for different locales.</li>
+                    <li>Use language keys in views and translations.</li>
+                    <li>Switch application language based on user preferences or browser settings.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">20. Using Blade Templates</div>
+                <p>Create dynamic views with Laravel's Blade templating engine:</p>
+                <ul>
+                    <li>Write PHP code directly in Blade templates.</li>
+                    <li>Extend layouts and include reusable components.</li>
+                    <li>Use control structures and directives for conditional logic and looping.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">21. Implementing Websockets with Laravel Echo</div>
+                <p>Enable real-time communication in Laravel applications:</p>
+                <ul>
+                    <li>Install Laravel Echo and a websocket server like Pusher or Laravel WebSockets.</li>
+                    <li>Configure broadcasting settings in <code>config/broadcasting.php</code>.</li>
+                    <li>Implement event broadcasting and listening using Laravel Echo.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">22. Securing Laravel Applications</div>
+                <p>Enhance security measures in Laravel projects:</p>
+                <ul>
+                    <li>Implement HTTPS and secure HTTP headers.</li>
+                    <li>Sanitize user inputs and validate requests.</li>
+                    <li>Use Laravel's built-in security features like CSRF protection.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">23. Managing User Roles and Permissions</div>
+                <p>Implement role-based access control (RBAC) in Laravel:</p>
+                <ul>
+                    <li>Define roles and permissions using Laravel's authorization gates.</li>
+                    <li>Assign roles to users and restrict access based on permissions.</li>
+                    <li>Implement middleware to check user roles and permissions.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">24. Monitoring Laravel Applications</div>
+                <p>Monitor performance and errors in Laravel applications:</p>
+                <ul>
+                    <li>Use Laravel Telescope for real-time monitoring and debugging.</li>
+                    <li>Implement logging and error reporting with Laravel's Monolog integration.</li>
+                    <li>Analyze application metrics and performance bottlenecks.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">25. Creating Custom Artisan Commands</div>
+                <p>Extend Laravel's command-line interface with custom commands:</p>
+                <ul>
+                    <li>Create command classes in <code>app/Console/Commands</code>.</li>
+                    <li>Define command signatures and handle methods.</li>
+                    <li>Register custom commands with Laravel's Artisan console.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">26. Building RESTful APIs with Laravel</div>
+                <p>Create RESTful APIs for web and mobile applications:</p>
+                <ul>
+                    <li>Define API routes and resource controllers.</li>
+                    <li>Serialize model data with Laravel's Eloquent resources.</li>
+                    <li>Implement authentication and rate limiting for APIs.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">27. Using Laravel Cashier for Subscription Billing</div>
+                <p>Integrate subscription billing with Laravel applications:</p>
+                <ul>
+                    <li>Install and configure Laravel Cashier for Stripe or other payment gateways.</li>
+                    <li>Manage subscriptions, invoices, and recurring billing cycles.</li>
+                    <li>Implement webhooks for handling subscription events.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">28. Creating Multi-Tenant Applications</div>
+                <p>Build scalable multi-tenant architectures with Laravel:</p>
+                <ul>
+                    <li>Separate tenant data using database schema or table prefixes.</li>
+                    <li>Implement tenant identification and isolation.</li>
+                    <li>Use Laravel's global scopes and middleware for tenant-specific logic.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">29. Building Real-Time Notifications</div>
+                <p>Implement real-time notifications in Laravel applications:</p>
+                <ul>
+                    <li>Use Laravel Echo and broadcasting events for real-time updates.</li>
+                    <li>Configure notification channels like database, SMS, or email.</li>
+                    <li>Display notifications to users in real-time.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">30. Extending Laravel with Custom Packages</div>
+                <p>Create and use custom packages to extend Laravel functionality:</p>
+                <ul>
+                    <li>Develop packages as standalone Composer packages or Laravel service providers.</li>
+                    <li>Register package routes, controllers, and views within Laravel applications.</li>
+                    <li>Publish package assets and configuration files for customization.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">31. Implementing Full-Text Search with Laravel Scout</div>
+                <p>Enable full-text search capabilities in Laravel applications:</p>
+                <ul>
+                    <li>Integrate Laravel Scout with search engines like Algolia or Elasticsearch.</li>
+                    <li>Index model data and perform advanced search queries.</li>
+                    <li>Implement search autocomplete and filtering options.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">32. Using Laravel Vapor for Serverless Deployments</div>
+                <p>Deploy Laravel applications using AWS Lambda and Serverless:</p>
+                <ul>
+                    <li>Set up Laravel Vapor environment and configuration.</li>
+                    <li>Deploy applications to AWS Lambda with minimal server management.</li>
+                    <li>Scale applications automatically based on demand.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">33. Building GraphQL APIs with Laravel</div>
+                <p>Create GraphQL APIs for flexible data querying:</p>
+                <ul>
+                    <li>Integrate GraphQL with Laravel using packages like Lighthouse.</li>
+                    <li>Define schema types, queries, mutations, and subscriptions.</li>
+                    <li>Optimize data fetching with GraphQL for client-side applications.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">34. Integrating Social Authentication</div>
+                <p>Enable OAuth authentication with social platforms in Laravel:</p>
+                <ul>
+                    <li>Use Laravel Socialite to authenticate users with providers like Facebook, Twitter, or Google.</li>
+                    <li>Store and manage user tokens securely for social authentication.</li>
+                    <li>Implement single sign-on (SSO) for seamless user experiences.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">35. Implementing Webhooks in Laravel Applications</div>
+                <p>Receive and process HTTP callbacks for event-driven architecture:</p>
+                <ul>
+                    <li>Define webhook endpoints and handle incoming HTTP requests.</li>
+                    <li>Validate webhook payloads and process events asynchronously.</li>
+                    <li>Use Laravel's queue system for reliable webhook processing.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">36. Building CRUD APIs with Laravel Resource Controllers</div>
+                <p>Create CRUD (Create, Read, Update, Delete) APIs for data management:</p>
+                <ul>
+                    <li>Define resourceful routes and controllers for API endpoints.</li>
+                    <li>Serialize model data with Laravel resources for consistent API responses.</li>
+                    <li>Implement validation, authentication, and authorization for API operations.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">37. Securing APIs with Laravel Sanctum</div>
+                <p>Authenticate SPAs and mobile applications with Laravel Sanctum:</p>
+                <ul>
+                    <li>Install and configure Laravel Sanctum for API token management.</li>
+                    <li>Authenticate API requests using Sanctum's token-based authentication.</li>
+                    <li>Manage token scopes and permissions for enhanced API security.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">38. Implementing Rate Limiting in Laravel APIs</div>
+                <p>Restrict API requests based on rate limits:</p>
+                <ul>
+                    <li>Configure rate limiting middleware in Laravel applications.</li>
+                    <li>Set rate limit thresholds and intervals for API endpoints.</li>
+                    <li>Handle rate limit exceeded responses and monitoring.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">39. Creating Dynamic Form Components with Laravel Livewire</div>
+                <p>Build interactive and dynamic UI components with Laravel Livewire:</p>
+                <ul>
+                    <li>Install and configure Laravel Livewire for server-side rendered components.</li>
+                    <li>Create form components with two-way data binding and actions.</li>
+                    <li>Handle form validation, submission, and dynamic updates with Livewire.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">40. Using Laravel Horizon for Queue Monitoring</div>
+                <p>Monitor and manage Laravel queues with Horizon:</p>
+                <ul>
+                    <li>Install and configure Laravel Horizon for queue dashboard and monitoring.</li>
+                    <li>Monitor job throughput, latency, and failed jobs in real-time.</li>
+                    <li>Scale queue workers and manage queue configurations.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">41. Managing Laravel Application Logs</div>
+                <p>Monitor and analyze application logs in Laravel:</p>
+                <ul>
+                    <li>Configure logging channels and drivers in <code>config/logging.php</code>.</li>
+                    <li>Use logging levels and contextual information for troubleshooting.</li>
+                    <li>Integrate logging with external services like Loggly or Papertrail.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">42. Building Offline-First Applications with Laravel PWA</div>
+                <p>Create Progressive Web Applications (PWA) with Laravel:</p>
+                <ul>
+                    <li>Install and configure Laravel PWA package for offline caching and service workers.</li>
+                    <li>Implement PWA features like push notifications and background syncing.</li>
+                    <li>Enhance user experience with fast loading and offline access capabilities.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">43. Implementing Multi-Factor Authentication (MFA) in Laravel</div>
+                <p>Enhance security with multi-factor authentication in Laravel:</p>
+                <ul>
+                    <li>Integrate MFA with Laravel using packages like Laravel Fortify.</li>
+                    <li>Enable two-factor authentication (2FA) for user accounts.</li>
+                    <li>Use authentication codes via SMS, email, or authenticator apps.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">44. Using Laravel Telescope for Application Debugging</div>
+                <p>Debug and profile Laravel applications with Telescope:</p>
+                <ul>
+                    <li>Install Laravel Telescope for real-time monitoring and insights.</li>
+                    <li>Track requests, exceptions, queries, and performance metrics.</li>
+                    <li>Analyze application behavior and optimize code performance.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">45. Implementing Continuous Integration (CI) with Laravel</div>
+                <p>Automate testing and deployment workflows with CI/CD tools:</p>
+                <ul>
+                    <li>Set up CI pipelines for Laravel applications using tools like GitHub Actions or GitLab CI/CD.</li>
+                    <li>Run automated tests, code quality checks, and deployment tasks.</li>
+                    <li>Integrate with version control systems for continuous integration and delivery.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">46. Building Real-Time Chat Applications with Laravel WebSockets</div>
+                <p>Create scalable chat applications with real-time messaging:</p>
+                <ul>
+                    <li>Set up Laravel WebSockets for handling websocket connections.</li>
+                    <li>Implement chat features like private messaging and online presence.</li>
+                    <li>Use Laravel Echo for real-time message broadcasting and event handling.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">47. Implementing Web Analytics with Laravel Matomo</div>
+                <p>Track and analyze user behavior with Matomo analytics in Laravel:</p>
+                <ul>
+                    <li>Integrate Laravel with Matomo analytics platform for data tracking.</li>
+                    <li>Implement page views, events, and custom tracking features.</li>
+                    <li>Analyze user engagement and behavior with Matomo reports and insights.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">48. Building Real-Time Dashboard with Laravel Livewire</div>
+                <p>Create interactive dashboards with real-time data updates:</p>
+                <ul>
+                    <li>Use Laravel Livewire for building dynamic and reactive UI components.</li>
+                    <li>Fetch and display real-time data updates from backend services.</li>
+                    <li>Implement data visualization and user interaction features.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">49. Implementing Job Queues with Laravel Vapor</div>
+                <p>Scale job processing and background tasks with Laravel Vapor:</p>
+                <ul>
+                    <li>Deploy Laravel applications to AWS Lambda with serverless architecture.</li>
+                    <li>Manage queue workers and job processing without traditional server management.</li>
+                    <li>Scale application resources dynamically based on demand and workload.</li>
+                </ul>
+            </div>
+            <div class="tutorial">
+                <div class="tutorial-title">50. Using Laravel Tinker for Interactive Console Sessions</div>
+                <p>Explore and interact with Laravel applications using Tinker:</p>
+                <ul>
+                    <li>Access Laravel models, databases, and application services from the command line.</li>
+                    <li>Execute PHP code snippets and test application logic interactively.</li>
+                    <li>Debug and troubleshoot application behavior with Tinker sessions.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section id="free-course">
+        <div class="free-course">
+            <h2>Free Laravel Course</h2>
+            <p>Enhance your skills with our free course on Laravel basics and advanced techniques.</p>
+            <p>Learn about:</p>
+            <ul>
+                <li>Setting up a Laravel environment</li>
+                <li>Creating and managing databases with Eloquent ORM</li>
+                <li>Building secure authentication systems</li>
+                <li>Automating tasks with Laravel Artisan</li>
+            </ul>
+            <p>Start learning today! <a href="outline.html">Enroll Now</a></p>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Toggle active class for navigation links
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>

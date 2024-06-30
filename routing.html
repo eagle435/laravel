@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routing in Laravel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Routing in Laravel</h1>
+    </header>
+    <main>
+        <section id="basic-routing">
+            <h2>Basic Routing</h2>
+            <p>Define routes in <code>routes/web.php</code>:</p>
+            <pre><code class="language-php">// Define a basic route
+Route::get('/hello', function () {
+    return 'Hello, Laravel!';
+});
+
+// Route with parameters
+Route::get('/user/{id}', function ($id) {
+    return 'User ID: ' . $id;
+});</code></pre>
+        </section>
+        <section id="named-routes">
+            <h2>Named Routes</h2>
+            <p>Name routes for easier URL generation:</p>
+            <pre><code class="language-php">// Named route
+Route::get('/profile', function () {
+    //
+})->name('profile');
+
+// Generating URL
+$url = route('profile');</code></pre>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
